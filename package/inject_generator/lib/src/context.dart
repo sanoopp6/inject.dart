@@ -94,7 +94,7 @@ class BuilderLogger {
     ElementDeclarationResult elementDeclaration;
     if (element.kind != ElementKind.DYNAMIC) {
       var parsedLibrary =
-          element.session.getParsedLibraryByElement(element.library);
+          element.library.session.getParsedLibraryByElement(element.library);
       if (parsedLibrary.state == ResultState.VALID) {
         elementDeclaration = parsedLibrary.getElementDeclaration(element);
       }
